@@ -1,7 +1,12 @@
 #include "Player.h"
 
 void Player::addGold(int i) {
-	gold += i;
+	if (gold + i > 10000) {
+		gold = 10000;
+	}
+	else {
+		gold += i;
+	}
 }
 
 
